@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<template
+	format="5"
+	revision="3"
+	name="MVVM Template Fragment"
+	description="Creates a new MVVM classes - Fragment.java, Navigator.java, ViewModel.java and FragmentLayout.xml">
+
+    <category value="MVVM Template"/>
+    <formfactor value="Mobile" />
+
+	<parameter id="fragmentName"
+        name="Fragment Name"
+        type="string"
+		constraints="class|nonempty|unique"
+		default="Blank"
+        help="The name of the fragment" />
+		
+    <parameter id="fragmentClass"
+        name="Fragment Name To Create"
+        type="string"
+        constraints="class|nonempty|unique"
+        suggest="${underscoreToCamelCase(classToResource(fragmentName))}Fragment"
+        default="BlankFragment"
+        help="The name of the fragment class to create" />
+		
+    <parameter
+        id="layoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="blank_fragment"
+        suggest="${fragmentToLayout(fragmentName)}"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="viewModelName"
+        name="ViewModel Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="BlankViewModel"
+        suggest="${underscoreToCamelCase(classToResource(fragmentName))}ViewModel"
+        help="The name of the ViewModel class to create" />
+
+    <parameter
+        id="navigatorName"
+        name="Navigator Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="BlankNavigator"
+        suggest="${underscoreToCamelCase(classToResource(fragmentName))}Navigator"
+        help="The name of the Navigator class to create" />
+
+    <thumbs>
+        <thumb>template_blank_fragment.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
