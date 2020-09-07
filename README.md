@@ -1,6 +1,11 @@
 # android-studio-mvvm-template
 This is an Android Studio template for MVVM architecture.
 
+## Example
+
+![Create MVVM Template](static/example.gif "Create MVVM Template")
+
+
 ## Installation
 
 #### For Mac
