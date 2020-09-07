@@ -5,6 +5,12 @@ This is an Android Studio template for MVVM architecture.
 
 ![Create MVVM Template](static/example.gif "Create MVVM Template")
 
+Then you can create a new `MVVM Template`. It will create:
+
+- A `Fragment`
+- A layout for your Fragment
+- A `Navigator` 
+- A `ViewModel`
 
 ## Installation
 
